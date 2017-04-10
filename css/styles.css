@@ -1,0 +1,166 @@
+@font-face {font-family:"EtelkaMediumPro"; src:url("../fonts/EtelkaMediumPro.woff") format("woff"); font-weight:normal; font-style:normal}
+
+html {min-width:480px; height:100%}
+
+body {min-width:480px; height:100%; margin:0; padding:0; font:300 16px/25px "Open Sans", sans-serif; color:#777; background:#fff; -webkit-text-size-adjust:100%}
+
+a {outline:none; color:#4ea1ff; text-decoration:none}
+
+img {border:none}
+
+.wrapper {min-width:480px; width:100%; min-height:100%; position:relative; overflow:hidden}
+.wrapper-inner {max-width:1170px; padding:0 15px 250px 15px; margin:0 auto}
+
+@media screen and (max-width:1199px) {
+    .wrapper-inner {padding:0 55px 525px 55px}
+}
+
+header:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+
+.logo {float:left; line-height:0; margin:52px 0 0 0}
+
+.header-contacts {float:right; text-align:right}
+
+.header-phone {font:16px/25px EtelkaMediumPro, sans-serif; color:#393939; margin:51px 0 0 0}
+.header-phone a {text-decoration:none; color:#393939}
+.header-email {font-size:15px; margin:-4px 0 0 0}
+
+.services-header {padding:0 300px 0 0; position:relative; margin:137px 0 0 0}
+.services-header h1 {font:47px/50px EtelkaMediumPro, sans-serif; color:#393939; margin:0; padding:0}
+.services-text {font-size:22px; line-height:38px; padding:31px 0 0 0}
+.services-link {position:absolute; right:0; top:-2px}
+
+@media screen and (max-width:1199px) {
+    .services-header {padding:0}
+    .services-link {position:static; right:auto; top:auto; margin:54px 0 0 0}
+}
+
+.presentation {display:block; width:270px; height:60px; background:#fff200; border-radius:3px; text-align:center; font-size:15px; line-height:60px; color:#393939}
+.presentation:before {content:""; display:inline-block; vertical-align:middle; width:25px; height:30px; background:url(../images/presentation.png); margin:-2px 11px 0 0}
+
+.services-list {margin:84px -20px 0 -20px}
+.services-list-inner {display:table; width:100%; border-collapse:separate; border-spacing:10px 0}
+.services-item {display:table-cell; vertical-align:top; width:25%; background:#f7f7f7; padding:0 30px}
+.services-item h2 {margin:0; padding:47px 0 26px 0; font:22px/25px EtelkaMediumPro, sans-serif; color:#393939; min-height:50px}
+.services-item ul {margin:0; padding:0 0 53px 0; list-style:none; font-size:15px; line-height:25px}
+.services-item ul:before {content:""; display:block; width:70px; height:3px; margin:0 0 34px 0; background:#393939}
+.services-item ul li {margin:12px 0 0 0; padding:0}
+
+@media screen and (max-width:1199px) {
+    .services-list {margin:0; padding:85px 0 0 0}
+    .services-list-inner {display:block; width:auto; border-spacing:0}
+    .services-item {display:block; width:auto; margin:10px 0 0 0}
+    .services-item h2 {cursor:pointer; padding:51px 0 50px 0; min-height:0; position:relative}
+    .services-item h2:after {content:""; display:block; width:19px; height:11px; background:url(../images/services-arrows.png); position:absolute; right:0; top:50%; margin-top:-5px}
+    .services-item.open h2:after {background-position:left -11px}
+    .services-item ul {display:none; margin-top:-27px}
+    .services-item.open ul {display:block}
+    .services-item ul:before {margin:0 0 46px 0}
+}
+
+.portfolio {margin:119px 0 0 0}
+.portfolio-header {padding:0 100px}
+.portfolio-header h2 {font:32px/38px EtelkaMediumPro, sans-serif; color:#393939; margin:0; padding:0}
+.portfolio-text {padding:39px 0 0 0}
+
+@media screen and (max-width:1199px) {
+    .portfolio {margin:109px 0 0 0}
+    .portfolio-header {padding:0}
+}
+
+.portfolio-list {margin:74px -20px 0 -20px}
+.portfolio-list:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.portfolio-item {float:left; width:25%; padding:5px; box-sizing:border-box}
+.portfolio-item a {display:block; margin:0 auto; width:290px; height:500px; position:relative; color:#fff; background:#393939}
+.portfolio-item a:hover {z-index:2}
+.portfolio-item.inverse a {background:#fff; color:#393939}
+.portfolio-item a img {position:absolute; left:0; top:0; width:100%; height:100%; transition:transform .5s ease}
+.portfolio-item a:hover img {transform:scale(1.05); box-shadow:0 7px 50px rgba(0, 0, 0, .33)}
+.portfolio-item a img.portfolio-img-mobile {display:none}
+.portfolio-item h3 {position:relative; padding:46px 30px 0 30px; font:20px/25px EtelkaMediumPro, sans-serif; margin:0}
+.portfolio-item ul {margin:0; padding:27px 30px 0 30px; font-size:15px; list-style:none; position:relative}
+.portfolio-item.inverse ul {color:#777}
+.portfolio-item ul li {margin:0; padding:0}
+
+@media screen and (max-width:1199px) {
+    .portfolio-list {margin-left:0; margin-right:0}
+    .portfolio-item {float:none; width:auto; padding:5px 0}
+    .portfolio-item a {width:370px}
+    .portfolio-item a img {display:none}
+    .portfolio-item a img.portfolio-img-mobile {display:block}
+}
+
+.portfolio-more {padding:55px 0 0 0}
+.portfolio-more a {display:block; margin:0 auto; width:368px; height:58px; color:#777; font-size:15px; line-height:58px; text-align:center; border:1px solid #d9d9d9}
+.portfolio-more a span:nth-child(2) {display:none}
+.portfolio-more a.loading span:nth-child(1) {display:none}
+.portfolio-more a.loading span:nth-child(2) {display:inline}
+
+.responses {margin:139px 0 79px 0}
+.responses-header {padding:0 100px}
+.responses-header h2 {font:32px/38px EtelkaMediumPro, sans-serif; color:#393939; margin:0; padding:0}
+.responses-text {padding:39px 0 0 0}
+
+@media screen and (max-width:1199px) {
+    .responses {margin-top:111px}
+    .responses-header {padding:0}
+}
+
+.responses-list {margin:0 -15px}
+.responses-list-inner {width:100%; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative}
+.responses-list-inner:before {content:""; display:block; width:9999px; position:absolute; z-index:9; right:100%; margin-right:15px; top:0; bottom:0; background:#fff}
+.responses-list-inner:after {content:""; display:block; width:9999px; position:absolute; z-index:9; left:100%; margin-left:15px; top:0; bottom:0; background:#fff}
+.responses-list-inner .slick-list {overflow:visible}
+.responses-item {display:inline-block; vertical-align:top; width:33.33%; padding:79px 15px 0 15px; box-sizing:border-box}
+.responses-item a {display:block; height:500px; text-align:center; line-height:500px; position:relative; overflow:hidden; width:100%; background:#fafafa}
+.responses-item a:hover {box-shadow:0 7px 30px rgba(0, 0, 0, .15)}
+.responses-item a:after {content:""; display:block; width:48px; height:48px; position:absolute; right:0; top:0; background:url(../images/zoom.png)}
+.responses-item a:hover:after {background-position:left -48px}
+.responses-item a img {display:inline-block; vertical-align:middle; max-width:100%; max-height:100%}
+.responses-item-title {text-align:center; font-size:12px; line-height:20px; letter-spacing:0; padding:28px 0 0 0; position:relative}
+.responses-item-title:before {content:""; display:block; position:absolute; left:50%; top:0; margin:0 0 0 -9px; width:0; height:0; border-top:9px solid #fafafa; border-left:9px solid transparent; border-right:9px solid transparent}
+.responses-item-title strong {display:block; font:15px/20px EtelkaMediumPro, sans-serif; color:#393939}
+.responses .slick-dots {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; margin:0; padding:61px 0 0 0}
+.responses .slick-dots li {margin:0 0 0 13px; padding:0; display:inline-block; vertical-align:top}
+.responses .slick-dots li:before {display:none}
+.responses .slick-dots li:first-child {margin:0}
+.responses .slick-dots li button {display:block; width:17px; height:17px; border-radius:50%; border:none; background:#e5e5e5; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
+.responses .slick-dots li.slick-active button {background:#4ea1ff}
+
+footer {background:#fafafa; height:225px; margin:-225px 0 0 0; position:relative; min-width:480px; width:100%; overflow:hidden}
+
+@media screen and (max-width:1199px) {
+    footer {height:500px; margin:-500px 0 0 0}
+}
+
+.footer-inner {max-width:1170px; padding:0 15px; margin:0 auto}
+
+@media screen and (max-width:1199px) {
+    .footer-inner {padding:0 55px}
+}
+
+.footer-address {float:left; width:300px}
+.footer-phone {float:left; width:225px}
+.footer-phone a {color:#393939}
+.footer-email {float:left}
+
+@media screen and (max-width:1199px) {
+    .footer-address {float:none; width:auto; padding:51px 0 0 0}
+    .footer-phone {float:none; width:auto}
+    .footer-email {float:none}
+}
+
+.footer-title {font-family:EtelkaMediumPro, sans-serif; color:#393939; padding:73px 0 0 0}
+.footer-text {font-size:15px; color:#393939; padding:1px 0 0 0}
+.footer-map-link {font-size:12px; padding:2px 0 0 0}
+
+@media screen and (max-width:1199px) {
+    .footer-title {padding:22px 0 0 0}
+}
+
+.footer-link {float:right; padding:70px 0 0 0}
+
+@media screen and (max-width:1199px) {
+    .footer-link {float:none; padding:58px 0 0 0}
+    .footer-link .presentation {width:100%}
+}
