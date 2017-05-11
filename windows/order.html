@@ -1,0 +1,26 @@
+<div class="window-order">
+    <div class="window-order-title">Оставить заявку</div>
+    <form action="windows/success.html" method="post" class="window-form">
+        <div class="order-row">
+            <div class="order-field">
+                <div class="form-input"><span>Имя</span><input type="text" name="name" value="" class="required" /></div>
+            </div>
+            <div class="order-field">
+                <div class="form-input"><span>Email</span><input type="text" name="email" value="" class="required email" /></div>
+            </div>
+            <div class="order-field">
+                <div class="form-input"><span>Телефон</span><input type="text" name="phone" value="" class="required maskPhone" /></div>
+            </div>
+        </div>
+        <div class="order-row">
+            <div class="form-input"><span>Ваш комментарий</span><textarea name="comment" rows="5" cols="10"></textarea></div>
+        </div>
+        <div class="order-row">
+            <div class="form-file">
+                <div class="form-file-input"><div class="form-file-progress"></div><span>Прикрепить файл</span><div class="form-file-name"></div><input type="file" name="file" class="required" /></div>
+            </div>
+
+            <div class="form-submit"><input type="submit" value="Отправить" /></div>
+        </div>
+    </form>
+</div>

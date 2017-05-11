@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <title>Bilingo</title>
 
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300&amp;subset=cyrillic" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" />
         <link rel="stylesheet" href="css/styles.css" />
         <link rel="stylesheet" href="js/slick/slick.css" />
         <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css">
@@ -12,9 +12,16 @@
         <script src="js/jquery-2.2.4.min.js"></script>
         <script src="js/slick/slick.min.js"></script>
         <script src="js/fancybox/jquery.fancybox.min.js"></script>
+        <script src="js/isotope.pkgd.min.js"></script>
+        <script src="js/jquery.maskedinput.min.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/jquery.ui.widget.js"></script>
+        <script src="js/jquery.fileupload/jquery.iframe-transport.js"></script>
+        <script src="js/jquery.fileupload/jquery.fileupload.js"></script>
         <script src="js/tools.js"></script>
 
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=1200" />
     </head>
 
     <body>
@@ -44,38 +51,38 @@
                             <div class="services-item">
                                 <h2>UX</h2>
                                 <ul>
-                                    <li><a href="#">Аналитика</a></li>
-                                    <li><a href="#">Разработка стратегии</a></li>
-                                    <li><a href="#">Информационная архитектура</a></li>
-                                    <li><a href="#">Пользовательские сценарии</a></li>
-                                    <li><a href="#">Интерактивные прототипы</a></li>
+                                    <li><a href="windows/services.html">Аналитика</a></li>
+                                    <li><a href="windows/services.html">Разработка стратегии</a></li>
+                                    <li><a href="windows/services.html">Информационная архитектура</a></li>
+                                    <li><a href="windows/services.html">Пользовательские сценарии</a></li>
+                                    <li><a href="windows/services.html">Интерактивные прототипы</a></li>
                                 </ul>
                             </div>
                             <div class="services-item open">
                                 <h2>UI</h2>
                                 <ul>
-                                    <li>Мобильные приложения</li>
-                                    <li>Сайты</li>
-                                    <li>Геоинформационные системы</li>
-                                    <li>Интерактивные презентации</li>
-                                    <li>Мультимедиа проекты</li>
+                                    <li><a href="windows/services.html">Мобильные приложения</a></li>
+                                    <li><a href="windows/services.html">Сайты</a></li>
+                                    <li><a href="windows/services.html">Геоинформационные системы</a></li>
+                                    <li><a href="windows/services.html">Интерактивные презентации</a></li>
+                                    <li><a href="windows/services.html">Мультимедиа проекты</a></li>
                                 </ul>
                             </div>
                             <div class="services-item">
                                 <h2>Интернет-маркетинг</h2>
                                 <ul>
-                                    <li>Аналитика</li>
-                                    <li>Разработка стратегии</li>
-                                    <li>Привлечение клиентов</li>
-                                    <li>Контент-стратегия</li>
+                                    <li><a href="windows/services.html">Аналитика</a></li>
+                                    <li><a href="windows/services.html">Разработка стратегии</a></li>
+                                    <li><a href="windows/services.html">Привлечение клиентов</a></li>
+                                    <li><a href="windows/services.html">Контент-стратегия</a></li>
                                 </ul>
                             </div>
                             <div class="services-item">
                                 <h2>Поддержка и&nbsp;развитие</h2>
                                 <ul>
-                                    <li>Техническая и сервисная поддержка</li>
-                                    <li>Маркетинговая поддержка</li>
-                                    <li>Создание новых бизнес-инструментов</li>
+                                    <li><a href="windows/services.html">Техническая и сервисная поддержка</a></li>
+                                    <li><a href="windows/services.html">Маркетинговая поддержка</a></li>
+                                    <li><a href="windows/services.html">Создание новых бизнес-инструментов</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -88,12 +95,22 @@
                     <div class="portfolio-header">
                         <h2>Создаем проекты, решающие поставленные задачи</h2>
                         <div class="portfolio-text">Наш интерес и желание понять клиента, узнать его бизнес и цели, помогает выстроить эффективный процесс общения с самого начала. Мы понимаем приоритеты и предлагаем разумные решения в зависимости от ситуации.</div>
+                        <div class="portfolio-menu">
+                            <ul>
+                                <li class="active" data-filter="*"><a href="#">Все</a></li>
+                                <li data-filter=".shop"><a href="#">Магазины</a></li>
+                                <li data-filter=".realty"><a href="#">Недвижимость</a></li>
+                                <li data-filter=".portal"><a href="#">Порталы</a></li>
+                                <li data-filter=".creative"><a href="#">Креатив</a></li>
+                                <li data-filter=".landing"><a href="#">Лендинги</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="portfolio-list">
-                        <div class="portfolio-item">
+                        <div class="portfolio-item portal">
                             <a href="#">
-                                <img src="files/portfolio-1.jpg" alt="" />
-                                <img src="files/portfolio-1-mobile.jpg" alt="" class="portfolio-img-mobile" />
+                                <img src="files/portfolio-01.jpg" alt="" />
+                                <img src="files/portfolio-01-mobile.jpg" alt="" class="portfolio-img-mobile" />
                                 <h3>Корпоративный портал компании «Ташир»</h3>
                                 <ul>
                                     <li>Проектирование интерфейсов</li>
@@ -102,10 +119,10 @@
                                 </ul>
                             </a>
                         </div>
-                        <div class="portfolio-item inverse">
+                        <div class="portfolio-item inverse shop">
                             <a href="#">
-                                <img src="files/portfolio-2.jpg" alt="" />
-                                <img src="files/portfolio-2-mobile.jpg" alt="" class="portfolio-img-mobile" />
+                                <img src="files/portfolio-02.jpg" alt="" />
+                                <img src="files/portfolio-02-mobile.jpg" alt="" class="portfolio-img-mobile" />
                                 <h3>Интернет-магазин ювелирной компании «Arbata»</h3>
                                 <ul>
                                     <li>Проектирование интерфейсов</li>
@@ -114,10 +131,10 @@
                                 </ul>
                             </a>
                         </div>
-                        <div class="portfolio-item">
+                        <div class="portfolio-item shop">
                             <a href="#">
-                                <img src="files/portfolio-3.jpg" alt="" />
-                                <img src="files/portfolio-3-mobile.jpg" alt="" class="portfolio-img-mobile" />
+                                <img src="files/portfolio-03.jpg" alt="" />
+                                <img src="files/portfolio-03-mobile.jpg" alt="" class="portfolio-img-mobile" />
                                 <h3>Интернет-магазин эко-продуктов «Николаев и сыновья»</h3>
                                 <ul>
                                     <li>Проектирование интерфейсов</li>
@@ -126,10 +143,10 @@
                                 </ul>
                             </a>
                         </div>
-                        <div class="portfolio-item">
+                        <div class="portfolio-item shop">
                             <a href="#">
-                                <img src="files/portfolio-4.jpg" alt="" />
-                                <img src="files/portfolio-4-mobile.jpg" alt="" class="portfolio-img-mobile" />
+                                <img src="files/portfolio-04.jpg" alt="" />
+                                <img src="files/portfolio-04-mobile.jpg" alt="" class="portfolio-img-mobile" />
                                 <h3>Система бронирования перевозок «Оборонлогистика»</h3>
                                 <ul>
                                     <li>Проектирование интерфейсов</li>
@@ -138,22 +155,22 @@
                                 </ul>
                             </a>
                         </div>
-                        <div class="portfolio-item">
+                        <div class="portfolio-item inverse portal">
                             <a href="#">
-                                <img src="files/portfolio-5.jpg" alt="" />
-                                <img src="files/portfolio-5.jpg" alt="" class="portfolio-img-mobile" />
-                                <h3>Продающий сайт новостройки ЖК «Союзный»</h3>
+                                <img src="files/portfolio-05.jpg" alt="" />
+                                <img src="files/portfolio-05.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Портал дилеров RICOH</h3>
                                 <ul>
-                                    <li>Проектирование интерфейсов</li>
-                                    <li>Дизайн</li>
-                                    <li>Программирование</li>
+                                    <li>Информационная архитектура</li>
+                                    <li>Интерфейс дилера</li>
+                                    <li>Интерфейс менеджера</li>
                                 </ul>
                             </a>
                         </div>
-                        <div class="portfolio-item">
+                        <div class="portfolio-item portal">
                             <a href="#">
-                                <img src="files/portfolio-6.jpg" alt="" />
-                                <img src="files/portfolio-6.jpg" alt="" class="portfolio-img-mobile" />
+                                <img src="files/portfolio-06.jpg" alt="" />
+                                <img src="files/portfolio-06.jpg" alt="" class="portfolio-img-mobile" />
                                 <h3>Федеральный музыкальный конкурс «Нашим Героям»</h3>
                                 <ul>
                                     <li>Проектирование интерфейсов</li>
@@ -162,10 +179,10 @@
                                 </ul>
                             </a>
                         </div>
-                        <div class="portfolio-item">
+                        <div class="portfolio-item portal">
                             <a href="#">
-                                <img src="files/portfolio-7.jpg" alt="" />
-                                <img src="files/portfolio-7.jpg" alt="" class="portfolio-img-mobile" />
+                                <img src="files/portfolio-07.jpg" alt="" />
+                                <img src="files/portfolio-07.jpg" alt="" class="portfolio-img-mobile" />
                                 <h3>Портал ГПУБ «Мосприрода»</h3>
                                 <ul>
                                     <li>Проектирование интерфейсов</li>
@@ -174,10 +191,10 @@
                                 </ul>
                             </a>
                         </div>
-                        <div class="portfolio-item inverse">
+                        <div class="portfolio-item inverse portal">
                             <a href="#">
-                                <img src="files/portfolio-8.jpg" alt="" />
-                                <img src="files/portfolio-8.jpg" alt="" class="portfolio-img-mobile" />
+                                <img src="files/portfolio-08.jpg" alt="" />
+                                <img src="files/portfolio-08.jpg" alt="" class="portfolio-img-mobile" />
                                 <h3>Минстрой РФ, Федеральный центр нормирования</h3>
                                 <ul>
                                     <li>Проектирование интерфейсов</li>
@@ -186,16 +203,271 @@
                                 </ul>
                             </a>
                         </div>
+                        <div class="portfolio-item inverse shop">
+                            <a href="#">
+                                <img src="files/portfolio-09.jpg" alt="" />
+                                <img src="files/portfolio-09.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Интернет-магазин театральных тканей</h3>
+                                <ul>
+                                    <li>Аналитика</li>
+                                    <li>Маркетинговая концепция</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item inverse shop">
+                            <a href="#">
+                                <img src="files/portfolio-10.jpg" alt="" />
+                                <img src="files/portfolio-10.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Интернет-магазин завода «350 ЖБИ» во&nbsp;Владивостоке</h3>
+                                <ul>
+                                    <li>Информационная архитектура</li>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item shop">
+                            <a href="#">
+                                <img src="files/portfolio-11.jpg" alt="" />
+                                <img src="files/portfolio-11.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Интернет-магазин аудио-систем La&nbsp;Melodia</h3>
+                                <ul>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item inverse shop">
+                            <a href="#">
+                                <img src="files/portfolio-12.jpg" alt="" />
+                                <img src="files/portfolio-12.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Интернет-магазин специализированной мебели «Оборон мебель»</h3>
+                                <ul>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item shop">
+                            <a href="#">
+                                <img src="files/portfolio-13.jpg" alt="" />
+                                <img src="files/portfolio-13.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Интернет-магазин студии элитной мебели и интерьеров House</h3>
+                                <ul>
+                                    <li>Информационная архитектура</li>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item creative">
+                            <a href="#">
+                                <img src="files/portfolio-14.jpg" alt="" />
+                                <img src="files/portfolio-14.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Сбербанк страхование жизни. Интерактивная новогодняя игра</h3>
+                                <ul>
+                                    <li>Поиск идей</li>
+                                    <li>Креативная концепция</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item inverse creative">
+                            <a href="#">
+                                <img src="files/portfolio-15.jpg" alt="" />
+                                <img src="files/portfolio-15.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Восточный банк. Креативная концепция</h3>
+                                <ul>
+                                    <li>Аналитика и отраслевой аудит</li>
+                                    <li>Креативная концепция</li>
+                                    <li>Дизайн</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item creative">
+                            <a href="#">
+                                <img src="files/portfolio-16.jpg" alt="" />
+                                <img src="files/portfolio-16.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Сбербанк страхование. Креативная концепция</h3>
+                                <ul>
+                                    <li>Аналитика и отраслевой аудит</li>
+                                    <li>Креативная концепция</li>
+                                    <li>Дизайн</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item portal">
+                            <a href="#">
+                                <img src="files/portfolio-17.jpg" alt="" />
+                                <img src="files/portfolio-17.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Корпоративный сайт оборонной компании «1470 УМТО»</h3>
+                                <ul>
+                                    <li>Аналитика</li>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item realty">
+                            <a href="#">
+                                <img src="files/portfolio-18.jpg" alt="" />
+                                <img src="files/portfolio-18.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>ЖК «Времена года», г.&nbsp;Анапа</h3>
+                                <ul>
+                                    <li>Информационная архитектура</li>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item realty">
+                            <a href="#">
+                                <img src="files/portfolio-19.jpg" alt="" />
+                                <img src="files/portfolio-19.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>ЖК «Времена года», г.&nbsp;Анапа. Адаптивная мобильная версия</h3>
+                                <ul>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item inverse shop">
+                            <a href="#">
+                                <img src="files/portfolio-20.jpg" alt="" />
+                                <img src="files/portfolio-20.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Интернет-магазин контрольно-кассовых машин RBS Group</h3>
+                                <ul>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item landing">
+                            <a href="#">
+                                <img src="files/portfolio-21.jpg" alt="" />
+                                <img src="files/portfolio-21.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Адаптивный лендинг SMB-продукции RICOH</h3>
+                                <ul>
+                                    <li>Аналитика</li>
+                                    <li>Маркетинговая концепция.</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item landing">
+                            <a href="#">
+                                <img src="files/portfolio-22.jpg" alt="" />
+                                <img src="files/portfolio-22.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>«Новые Ватутинки». Лендинг новых корпусов</h3>
+                                <ul>
+                                    <li>Аналитика</li>
+                                    <li>Маркетинговая концепция.</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item realty">
+                            <a href="#">
+                                <img src="files/portfolio-23.jpg" alt="" />
+                                <img src="files/portfolio-23.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>«Новые Ватутинки». Центр Новой Москвы</h3>
+                                <ul>
+                                    <li>Информационная архитектура</li>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item realty">
+                            <a href="#">
+                                <img src="files/portfolio-24.jpg" alt="" />
+                                <img src="files/portfolio-24.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>ЖК «Союзный», г.&nbsp;Одинцово. Мобильная версия</h3>
+                                <ul>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item realty">
+                            <a href="#">
+                                <img src="files/portfolio-25.jpg" alt="" />
+                                <img src="files/portfolio-25.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>ЖК «Союзный», г.&nbsp;Одинцово</h3>
+                                <ul>
+                                    <li>Информационная архитектура</li>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item realty">
+                            <a href="#">
+                                <img src="files/portfolio-26.jpg" alt="" />
+                                <img src="files/portfolio-26.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>«Новые Ватутинки». Система бронирования паркинга</h3>
+                                <ul>
+                                    <li>Информационная архитектура</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item shop">
+                            <a href="#">
+                                <img src="files/portfolio-27.jpg" alt="" />
+                                <img src="files/portfolio-27.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>Интернет-магазин подписной прессы компании «Логос»</h3>
+                                <ul>
+                                    <li>Информационная архитектура</li>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование</li>
+                                </ul>
+                            </a>
+                        </div>
+                        <div class="portfolio-item creative">
+                            <a href="#">
+                                <img src="files/portfolio-28.jpg" alt="" />
+                                <img src="files/portfolio-28.jpg" alt="" class="portfolio-img-mobile" />
+                                <h3>ГПУБ «Мосприрода». Мобильное приложение</h3>
+                                <ul>
+                                    <li>Информационная архитектура</li>
+                                    <li>Проектирование интерфейсов</li>
+                                    <li>Дизайн</li>
+                                    <li>Программирование iOS/Android</li>
+                                </ul>
+                            </a>
+                        </div>
                     </div>
-
-                    <div class="portfolio-more"><a href="files/portfolio-1.html"><span>Показать ещё</span><span>Загрузка</span></a></div>
                 </div>
                 <!-- portfolio END -->
+
+                <div class="order-block">
+                    <h2>Решаем задачи, создаём проекты, трансформируем бизнес</h2>
+                    <div class="order-block-link"><a href="windows/order.html" class="window-link">Подать заявку</a></div>
+                </div>
 
                 <!-- responses -->
                 <div class="responses">
                     <div class="responses-header">
-                        <h2>Мы любим наших клиентов, а они любят нас</h2>
+                        <h2>Наша гордость — это рекомендации наших клиентов</h2>
                         <div class="responses-text">Наш интерес и желание понять клиента, узнать его бизнес и цели, помогает выстроить эффективный процесс общения с самого начала. Мы понимаем приоритеты и предлагаем разумные решения в зависимости от ситуации.</div>
                     </div>
                     <div class="responses-list">
