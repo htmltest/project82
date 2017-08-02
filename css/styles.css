@@ -183,6 +183,12 @@ footer {background:#fafafa; height:225px; margin:-225px 0 0 0; position:relative
     .footer-link .presentation {width:100%}
 }
 
+.agima-link {float:right; line-height:0; clear:right; margin:23px -12px 0 0}
+
+@media screen and (max-width:1199px) {
+    .agima-link {float:none; display:block; margin-right:0; text-align:center}
+}
+
 .window-open body {overflow:hidden}
 
 .window {position:fixed; left:0; top:0; right:0; bottom:0; z-index:99997; overflow:auto; background:#fff200}
