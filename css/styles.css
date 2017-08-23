@@ -48,8 +48,9 @@ header:after {content:"."; display:block; clear:both; visibility:hidden; height:
 .services-item ul {margin:0; padding:0 0 53px 0; list-style:none; font-size:15px; line-height:25px}
 .services-item ul:before {content:""; display:block; width:70px; height:3px; margin:0 0 34px 0; background:#393939}
 .services-item ul li {margin:12px 0 0 0; padding:0}
-.services-item ul li a {color:#777}
+.services-item ul li a {color:#777; position:relative; display:inline-block}
 .services-item ul li a:hover {color:#777; text-decoration:underline}
+.services-item ul li a span {position:relative; background:#f7f7f7}
 
 @media screen and (max-width:1199px) {
     .services-list {margin:0; padding:85px 0 0 0}
@@ -109,8 +110,12 @@ header:after {content:"."; display:block; clear:both; visibility:hidden; height:
 .order-block:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
 .order-block h2 {float:left; margin:0; padding:57px 0 0 0; width:550px; font:32px/38px EtelkaMediumPro, sans-serif; color:#393939}
 .order-block-link {float:right; width:270px; padding:66px 0 0 0}
-.order-block-link a {display:block; height:60px; background:#fff200; border-radius:3px; text-align:center; text-transform:uppercase; font:12px/60px EtelkaMediumPro, sans-serif; color:#393939; transition:background .3s ease}
-.order-block-link a:hover {background:#ffe600; text-decoration:none}
+.order-block-link a {display:block; height:60px; border-radius:3px; text-align:center; text-transform:uppercase; font:12px/60px EtelkaMediumPro, sans-serif; color:#393939; position:relative}
+.order-block-link a:hover {text-decoration:none}
+.order-block-link a span {display:block; height:60px; border-radius:3px; background:#fff200; position:relative; transition:background .3s ease}
+.order-block-link a:hover span {background:#ffe600}
+
+.window-link-bg {position:absolute; left:50%; top:50%; width:2px; height:2px; background:#fff200; margin:-1px 0 0 -1px; border-radius:50%}
 
 .responses {margin:117px 0 79px 0}
 .responses-header {padding:0 100px}
@@ -193,7 +198,7 @@ footer {background:#fafafa; height:225px; margin:-225px 0 0 0; position:relative
 
 .window {position:fixed; left:0; top:0; right:0; bottom:0; z-index:99997; overflow:auto; background:#fff200}
 .window-loading {position:absolute; left:50%; top:50%; width:24px; height:24px; margin:-12px 0 0 -12px; background:url(../images/loading.gif)}
-.window-container {position:absolute; z-index:99999; left:50%; top:0}
+.window-container {position:absolute; z-index:99999; left:50%; top:50%}
 .window-container-load {position:fixed; left:-9999px; top:-9999px}
 .window-content {position:relative; background:#fff}
 .window-close {display:block; position:absolute; right:100px; top:65px; color:#333; text-transform:uppercase; text-decoration:none; font:12px/20px EtelkaMediumPro, sans-serif}
