@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     $('.services-item h2').click(function() {
         $(this).parent().toggleClass('open');
     });
@@ -107,6 +106,9 @@ $(document).ready(function() {
 
     $.validator.addMethod('maskPhone',
         function(value, element) {
+            if (value == '') {
+                return true;
+            }
             return /^\+7 \(\d{3}\) \d{3}\-\d{2}\-\d{2}$/.test(value);
         },
         'Не соответствует формату'
@@ -129,6 +131,18 @@ $(document).ready(function() {
         curLink.find('.window-link-bg').css({'width': 2, 'height': 2, 'margin-left': -1, 'margin-top': -1, 'z-index': 'auto'});
             windowOpen(curLink.attr('href'), null, function() {
                 $('.window-services-menu li.active').parent().slideDown();
+                if ($('.window').width() < 1200) {
+                    $('.window').addClass('window-service-wrap');
+                    $('.window-services-content').jScrollPane({
+                        autoReinitialise: true
+                    }).bind('jsp-scroll-y', function(event, scrollPositionY, isAtTop, isAtBottom) {
+                        if (isAtTop) {
+                            $('.window').removeClass('havescroll');
+                        } else {
+                            $('.window').addClass('havescroll');
+                        }
+                    });
+                }
             });
         });
         e.preventDefault();
@@ -148,7 +162,47 @@ $(document).ready(function() {
             $('.window-services-tab:visible').stop(true, true).fadeOut(function() {
                 $('.window-services-tab').eq(curIndex).fadeIn();
             });
+            $('.window').removeClass('window-services-mobile-menu-open');
         }
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.window-services-mobile-menu-link', function(e) {
+        $('.window').toggleClass('window-services-mobile-menu-open');
+        if ($('.window').hasClass('window-services-mobile-menu-open')) {
+            if ($('.window-services-menu-wrap').length == 0) {
+                $('.window-services-menu').wrap('<div class="window-services-menu-wrap"></div>');
+            }
+            var apiScroll = $('.window-services-menu-wrap').data('jsp');
+            if (apiScroll) {
+                apiScroll.destroy();
+            }
+            $('.window-services-menu-wrap').jScrollPane({
+                autoReinitialise: true
+            });
+        }
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.window-services-next', function(e) {
+        var curLi = $('.window-services-menu > ul > li > ul > li.active');
+        var curIndex = $('.window-services-menu > ul > li > ul > li').index(curLi);
+        curIndex++;
+        if (curIndex > $('.window-services-menu > ul > li > ul > li').length - 1) {
+            curIndex = 0;
+        }
+        $('.window-services-menu > ul > li > ul > li').eq(curIndex).find('a').trigger('click');
+        e.preventDefault();
+    });
+
+    $('body').on('click', '.window-services-prev', function(e) {
+        var curLi = $('.window-services-menu > ul > li > ul > li.active');
+        var curIndex = $('.window-services-menu > ul > li > ul > li').index(curLi);
+        curIndex--;
+        if (curIndex < 0) {
+            curIndex = $('.window-services-menu > ul > li > ul > li').length - 1;
+        }
+        $('.window-services-menu > ul > li > ul > li').eq(curIndex).find('a').trigger('click');
         e.preventDefault();
     });
 
@@ -212,7 +266,7 @@ function initForm(curForm) {
     }
 }
 
-function windowOpen(linkWindow, dataWindow = null, callbackWindow = null) {
+function windowOpen(linkWindow, dataWindow, callbackWindow) {
     $('html').addClass('window-open');
 
     if ($('.window').length > 0) {
@@ -252,7 +306,7 @@ function windowOpen(linkWindow, dataWindow = null, callbackWindow = null) {
                 windowPosition();
             }
 
-            if (callbackWindow !== null) {
+            if (callbackWindow) {
                 callbackWindow.call();
             }
 
